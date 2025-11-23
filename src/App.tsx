@@ -1,34 +1,48 @@
 import "./styles/theme.css";
 import "./styles/global.css";
+import { Container } from "./components/Container";
+import { Logo } from "./components/Logo";
+import { Menu } from "./components/Menu";
+import { CountDown } from "./components/CountDown";
+import { DefaultInput } from "./components/DefaultInput";
 
 function App() {
   console.log("App is running");
 
   return (
     <>
-      <div className="container">
-        <div className="content">
-          <section>LOGO</section>
-        </div>
-      </div>
+      <Container>
+        <Logo />
+      </Container>
 
-      <div className="container">
-        <div className="content">
-          <section>MENU</section>
-        </div>
-      </div>
+      <Container>
+        <Menu />
+      </Container>
 
-      <div className="container">
-        <div className="content">
-          <section>FORM</section>
-        </div>
-      </div>
+      <Container>
+        <CountDown />
+      </Container>
 
-      <div className="container">
-        <div className="content">
-          <section>FOOTER</section>
-        </div>
-      </div>
+      <Container>
+        <form className="form" action="">
+          <div className="formRow">
+            <DefaultInput labelText="Task" id="input" type="" title="TITULO" />
+          </div>
+
+          <div className="formRow">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className="formRow">
+            <p>Ciclos</p>
+            <p>0 0 0 0 0 0 0 0</p>
+          </div>
+
+          <div className="formRow">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </>
   );
 }
